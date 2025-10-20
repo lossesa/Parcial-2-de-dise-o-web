@@ -1,0 +1,46 @@
+// Programación Estructurada - Condicionales
+
+function sistemaCalificaciones(puntuacion) {
+    let letra;
+    let aprobado;
+
+    // Validar que la puntuación sea un número entre 0 y 100
+    if (typeof puntuacion !== "number" || isNaN(puntuacion)) {
+        console.log("Error: La puntuación debe ser un número.");
+        return;
+    }
+
+    if (puntuacion < 0 || puntuacion > 100) {
+        console.log("Error: La puntuación debe estar entre 0 y 100.");
+        return;
+    }
+
+    // Asignar letra según la puntuación
+    if (puntuacion >= 90) {
+        letra = "A";
+        aprobado = true;
+    } else if (puntuacion >= 80) {
+        letra = "B";
+        aprobado = true;
+    } else if (puntuacion >= 70) {
+        letra = "C";
+        aprobado = true;
+    } else if (puntuacion >= 60) {
+        letra = "D";
+        aprobado = false;
+    } else {
+        letra = "F";
+        aprobado = false;
+    }
+
+    // Mostrar resultados
+    // console.log(`Puntuación: ${puntuacion}`);
+    // console.log(`Calificación: ${letra}`);
+    // console.log(aprobado ? "Estado: Aprobado ✅" : "Estado: Reprobado ❌");
+}
+
+// Prueba manual
+// sistemaCalificaciones(85);  
+// sistemaCalificaciones(58);  
+// sistemaCalificaciones(102); 
+// sistemaCalificaciones("hola"); 
